@@ -479,8 +479,40 @@ section .societies-box .society-img img{
     position: relative;
 }
 #content-container .content p{
-    padding: 1rem 2rem;
+    padding: 10px 10px;
     color: black;
+    margin-bottom: 2.4rem;
+    height: 85px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+}
+#content-container .content .more {
+    background: #152b61;
+    padding: 5px 10px;
+    border-radius: 3px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    height: 2.8rem;
+    padding: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+.more a {
+    color: white;
+    width: 100%;
+    height: 100%;
+    padding-top: 4px;
+    background: transparent;
+    border-radius: 5px;
+}
+.more a:hover{
+    background: #0c245e;
 }
 #content-container .content .notify {
     width: 25px;
@@ -517,7 +549,18 @@ section .societies-box .society-img img{
     user-select: text;
 }
 #content-container .content:hover {
-    box-shadow: 0 3rem 3rem rgba(0,0,0,0.3)
+    box-shadow: 0 3rem 3rem rgba(0,0,0,0.3);
+    transform: scale(1.02);
+    animation: scale 300ms ease;
+}
+@keyframes scale {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.02);
+    }
+    
 }
 #content-container .page-toggle{
     width: 100%;
@@ -623,6 +666,9 @@ footer p {
     }
     #content-container .content .content-img img {
         height: 400px;
+    }
+    .content p {
+        margin-bottom: 2.8rem;
     }
 }
 
